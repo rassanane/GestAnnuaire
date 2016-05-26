@@ -1,0 +1,25 @@
+
+{
+   "pers1" : {
+	"id":   1,
+	  "nom" : "ASSANANE",
+	  "prenom" : "Rachid",
+	  "age" : "40",
+	  "groupe": 1
+   },
+   "pers2" : {
+	"id":   2,
+	  "nom" : "ASSANANE",
+	  "prenom" : "Omar",
+	  "age" : "30",
+	  "groupe": 1
+   },
+   "pers3" : {
+	"id":   3,
+          "nom" : "MAHLA",
+	  "prenom" : "password3",
+	  "age" : "20",
+	  "groupe": 2
+   }
+}
+

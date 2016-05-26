@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="scotchApp">
+
+<head>
+
+  <!-- SCROLLS -->
+	  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+
+	  <!-- juste les pictos ?????????????-->
+	  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+	  <!-- http://fontawesome.io/icons/ -->
+
+	  <link rel="stylesheet" href="styles.css" />
+
+
+  <!-- SPELLS -->
+	  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
+	  <script src="script.js"></script>
+
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="listePersonneController" onload="initializeModal();">
+
+
+	<header class="text-center">
+	<h1>Single Page App</h1>
+	</header>
+
+
+  <nav class="navbar navbar-default">
+
+    <div class="container">
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Angular Routing Example</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+        <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+      </ul>
+
+    </div>
+
+  </nav>
+
+
+
+
+  <div id="main">
+  
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+  </div>
+
+
+  <footer class="text-center">
+    <p>View the tutorial on <a href="http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating">Scotch.io</a></p>
+  
+    <p>View a tutorial on <a href="http://scotch.io/tutorials/javascript/animating-angularjs-apps-ngview">Animating Your Angular Single Page App</a></p>
+  </footer>
+  
+
+
+
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+
+    <span class="close">x</span>
+
+        <form role="form" name="annuaireForm">
+
+            <div class="form-group">
+                <input type="hidden" class="form-control" id="id" placeholder="Id">
+            </div>
+ 
+            <div class="form-group">
+                <input type="nom" class="form-control" id="nom" placeholder="Nom">
+            </div>
+ 
+            <div class="form-group">
+                <input type="prenom" class="form-control" id="prenom" placeholder="Prénom">
+            </div>
+  
+            <div class="form-group">
+                <input type="age" class="form-control" id="age" placeholder="Age">
+            </div>
+  
+            <div class="form-group">
+                <input type="groupe" class="form-control" id="groupe" placeholder="Groupe">
+            </div>
+  
+            <a href="#" ng-click="maj()" class="btn btn-default pull-right">Submit</a>
+        </form>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+<div class="jumbotron text-center">
+
+	<h1>Liste des personnes</h1>
+
+	<center>
+	<div align="left" id="divlistepersonnes">
+		<ul><li ng-repeat="person in personsArray">
+			<div id="divnomprenom"><a href="#">{{person.nom}} {{person.prenom}}</a></div> 
+			<div id="divactions" align="right"><a href="#" ng-click="afficherMaj(person.id_personnes)">Modifier</a> <a href="#" ng-click="supprimer(person.id_personnes)">Supprimer</a> </div>
+		</li></ul>
+	</div>
+	</center>
+	
+	<div id="divajouterpersonne" align="right"><a href="#" ng-click="afficherCreer();">Ajouter une personne</a></div>
+</div>
+
+
+
+
+
+
+
