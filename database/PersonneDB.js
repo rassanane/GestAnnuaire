@@ -1,9 +1,8 @@
 
 // grab the things we need
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/annuaire');
-//Test mongo lab :: ca marche pas ????
-//mongoose.connect('mongodb://rachid:test123@ds011933.mlab.com:11933/base_test');
+//mongoose.connect('mongodb://localhost:27017/annuaire');
+mongoose.connect('mongodb://rachid:test123@ec2-54-200-43-246.us-west-2.compute.amazonaws.com:11933/base_test');
 
 
 var Schema = mongoose.Schema;

@@ -1,6 +1,10 @@
-	// create the module and name it scotchApp
+	// create the module and name it scotchApp.
 	//var scotchApp = angular.module('scotchApp', ['ngRoute', 'ngDialog']);
 	var scotchApp = angular.module('scotchApp', ['ngRoute']);
+	
+	//L'url des services Rest :
+	//var servicesUrl = "http://localhost:3000";
+	var servicesUrl = "http://ec2-54-200-43-246.us-west-2.compute.amazonaws.com";
 
 	// configure our routes
 	scotchApp.config(function($routeProvider) {
@@ -54,10 +58,10 @@
 				alert(data);
 				//$scope.greeting = data;
 			});*/
-
+		
 		$http({
 			method : "GET",
-			url : "http://localhost:3000/personnes"
+			url : servicesUrl + "/personnes"
 		}).then(function mySucces(response) {
 			$scope.personsArray = response.data.personnesDB;
 			//$scope.personsArray = JSON.stringify(response.data.personnesDB);
@@ -83,7 +87,7 @@
 			if(confirm("Etes vous sur de vouloir supprimer ? ")){
 				$http({
 					method : "GET",
-					url : "http://localhost:3000/personnes/delPersonne/"+ident
+					url : servicesUrl + "/personnes/delPersonne/"+ident
 				}).then(function mySucces(response) {
 					$scope.personsArray = response.data.personnesDB;
 				}, function myError(response) {
@@ -119,7 +123,7 @@
 					}
 				}
 
-				$http.post('http://localhost:3000/personnes/majPersonne/', JSON.stringify(datajson), config)
+				$http.post(servicesUrl + '/personnes/majPersonne/', JSON.stringify(datajson), config)
 					.then(function mySucces(response) {
 					$scope.personsArray = response.data.personnesDB;
 				}, function myError(response) {
@@ -137,7 +141,7 @@
 			
 			$http({
 				method : "GET",
-				url : "http://localhost:3000/personnes/"+ident
+				url : servicesUrl + "/personnes/"+ident
 			}).then(function mySucces(response) {
 
 				document.getElementById('id').value = response.data.personneDB[0].id_personnes;
