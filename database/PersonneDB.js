@@ -2,7 +2,13 @@
 // grab the things we need
 var mongoose = require('mongoose');
 //mongoose.connect('mongodb://localhost:27017/annuaire');
-mongoose.connect('mongodb://rachid:test123@ec2-54-200-43-246.us-west-2.compute.amazonaws.com:11933/base_test');
+//ec2-54-191-118-249.us-west-2.compute.amazonaws.com
+//mongoose.connect('mongodb://rachid:test123@ec2-54-191-118-249.us-west-2.compute.amazonaws.com:11933/base_test');
+//mongoose.connect('mongodb://rachid:test123@ec2-54-191-118-249.us-west-2.compute.amazonaws.com:27017/base_test');
+mongoose.connect('mongodb://rachid:test123@54.191.118.249:27017/base_test');
+
+
+
 
 
 var Schema = mongoose.Schema;
@@ -36,3 +42,4 @@ var PersonneDB = mongoose.model('Personne', personneSchema);
 // make this available to our users in our Node applications
 module.exports = PersonneDB;
 
+  

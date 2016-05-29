@@ -3,8 +3,9 @@
 	var scotchApp = angular.module('scotchApp', ['ngRoute']);
 	
 	//L'url des services Rest :
-	//var servicesUrl = "http://localhost:3000";
-	var servicesUrl = "http://ec2-54-200-43-246.us-west-2.compute.amazonaws.com";
+	//var servicesUrl = "http://localhost:8080";
+	//var servicesUrl = "http://ec2-54-200-43-246.us-west-2.compute.amazonaws.com";
+	var servicesUrl = "http://ec2-54-191-118-249.us-west-2.compute.amazonaws.com";
 
 	// configure our routes
 	scotchApp.config(function($routeProvider) {
