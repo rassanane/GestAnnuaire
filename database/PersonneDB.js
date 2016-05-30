@@ -1,13 +1,19 @@
 
 // grab the things we need
 var mongoose = require('mongoose');
-//mongoose.connect('mongodb://localhost:27017/annuaire');
+
+//URL ma base MongoLab
+//mongoose.connect('mongodb://rachid:test123@ds011933.mlab.com:11933/base_test');
+
+mongoose.connect('mongodb://localhost:27017/annuaire');
 //ec2-54-191-118-249.us-west-2.compute.amazonaws.com
 //mongoose.connect('mongodb://rachid:test123@ec2-54-191-118-249.us-west-2.compute.amazonaws.com:11933/base_test');
 //mongoose.connect('mongodb://rachid:test123@ec2-54-191-118-249.us-west-2.compute.amazonaws.com:27017/base_test');
-mongoose.connect('mongodb://rachid:test123@54.191.118.249:27017/base_test');
+//mongoose.connect('mongodb://rachid:test123@54.191.118.249:27017/base_test');
 
-
+//Mon instance EC2 dediée pour MongoDB
+//mongoose.connect('mongodb://rachid:test123@54.201.84.182:27017/base_test');
+	
 
 
 

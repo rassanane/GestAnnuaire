@@ -3,9 +3,10 @@
 	var scotchApp = angular.module('scotchApp', ['ngRoute']);
 	
 	//L'url des services Rest :
-	//var servicesUrl = "http://localhost:8080";
-	//var servicesUrl = "http://ec2-54-200-43-246.us-west-2.compute.amazonaws.com";
-	var servicesUrl = "http://ec2-54-191-118-249.us-west-2.compute.amazonaws.com";
+	var servicesUrl = "http://localhost:3000";
+	//var servicesUrl = "http://ec2-54-200-43-246.us-west-2.compute.amazonaws.com:3000";
+	//var servicesUrl = "http://ec2-54-191-118-249.us-west-2.compute.amazonaws.com:3000";
+	//var servicesUrl = "http://54.191.118.249:3000";
 
 	// configure our routes
 	scotchApp.config(function($routeProvider) {
@@ -64,9 +65,11 @@
 			method : "GET",
 			url : servicesUrl + "/personnes"
 		}).then(function mySucces(response) {
+			//alert(JSON.stringify(response.data.personnesDB));
 			$scope.personsArray = response.data.personnesDB;
 			//$scope.personsArray = JSON.stringify(response.data.personnesDB);
 		}, function myError(response) {
+			//alert(JSON.stringify(response));
 			$scope.personsArray = response.statusText;
 		});
 
